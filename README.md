@@ -4,7 +4,7 @@ This project generates a combined figure showing classifier performance across d
 
 ## Final Figure
 
-![Combined Figure](combined_figure_final.png)
+![Combined Figure](combined_figure_final.pdf) #how pdf
 
 *Figure: Classifier performance analysis. (A) Performance metrics across different feature sets and training dataset sizes, showing window-based features (top row), published keypoint sets (middle row), and ablation keypoint sets (bottom row). (B) Summary table of F1 scores for all feature sets with color coding matching the plot.*
 
