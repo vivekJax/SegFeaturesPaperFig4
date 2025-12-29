@@ -4,11 +4,13 @@ This project generates a combined figure showing classifier performance across d
 
 ## Final Figure
 
-![Combined Figure](fig_combined_from_plotnine.png)
+The complete figure with both panels is available here:
+
+[![Combined Figure](combined_figure_final.pdf)](combined_figure_final.pdf)
 
 *Figure: Classifier performance analysis. (A) Performance metrics across different feature sets and training dataset sizes, showing window-based features (top row), published keypoint sets (middle row), and ablation keypoint sets (bottom row). (B) Summary table of F1 scores for all feature sets with color coding matching the plot.*
 
-**Note:** The final combined figure with both panels is available as `combined_figure_final.pdf`.
+**Note:** Click the image above to view the full-resolution PDF. The plot panel (Panel A) is also available as `fig_combined_from_plotnine.png`.
 
 ## Quick Start
 
