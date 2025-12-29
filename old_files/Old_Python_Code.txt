@@ -1,0 +1,25 @@
+# Create combined plot
+plot = (
+    p9.ggplot(combined_df, p9.aes(x='train_label_size', y='value', color='color_var'))
+    + p9.geom_smooth(alpha=0, method='auto', se=False)
+    + p9.geom_point(original_perf_combined, p9.aes(x='train_label_size', y='value'), shape='*', color='black', size=3, fill='#ffffff00')
+    + p9.facet_grid('plot_group ~ variable', scales='free_y')
+    + p9.scale_y_continuous(breaks=np.arange(0.4, 1.2, 0.2), limits=(0.4, 1.0))
+    + p9.theme_bw()
+    + p9.theme(
+        panel_border=p9.element_rect(color='black', size=1),
+        panel_grid_major=p9.element_line(color='grey', alpha=0.3),
+        panel_grid_minor=p9.element_blank(),
+        strip_background=p9.element_blank(),
+        strip_text_y=p9.element_text(size=11, angle=90, ha='left'),
+        legend_position='none',
+    )
+    + p9.guides(color=p9.guide_legend(override_aes={'size': 0, 'alpha': 0}))
+    + p9.scale_color_manual(values=all_plot_colors, limits=all_color_vars)
+    + p9.scale_x_log10()
+    + p9.labs(x='Annotation Dataset Size', y='', color='Feature Set')
+)
+
+# print(plot)
+scale = 0.7
+plot.save('fig_combined.svg', width=4.5 * scale, height=7 * scale)

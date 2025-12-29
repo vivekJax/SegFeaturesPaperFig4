@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+
+% Define subtle colors for professional row shading
+\definecolor{headerbg}{HTML}{F5F5F5}
+\definecolor{rowlight}{HTML}{FAFAFA}
+
+\begin{document}
+
+\begin{table}[H]
+    \sffamily
+    \centering
+    \small
+    \renewcommand{\arraystretch}{1.4}
+    \setlength{\tabcolsep}{10pt}
+    \begin{tabular}{>{\centering\arraybackslash}p{0.3cm}l>{\centering\arraybackslash}m{1.5cm}>{\centering\arraybackslash}m{1.5cm}c>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1.3cm}}
+        \toprule
+        \rowcolor{headerbg}
+         & \textbf{Keypoint Set} & \textbf{Icon (Blue)} & \textbf{Icon (Red)} & \textbf{Citation} & \textbf{Keypoints} & \textbf{Features} \\
+        \midrule
+        \rowcolor{rowlight}
+        \textcolor[HTML]{80B1D3}{\rule{0.25cm}{0.25cm}} & JABS & \includegraphics[width=35px]{icons/JABS_Skeleton_colorized.pdf} & \includegraphics[width=35px]{icons/JABS_Skeleton_colorized_red.pdf} & \cite{beane2022video} & 12 & 1,947 \\
+        \textcolor[HTML]{8DD3C7}{\rule{0.25cm}{0.25cm}} & MARS & \includegraphics[width=35px]{icons/mars_no_front_paws_no_center_spine_Skeleton_colorized.pdf} & \includegraphics[width=35px]{icons/mars_no_front_paws_no_center_spine_Skeleton_colorized_red.pdf} & \cite{segalin2021mouse} & 9 & 1,113 \\
+        \rowcolor{rowlight}
+        \textcolor[HTML]{FDD49E}{\rule{0.25cm}{0.25cm}} & MoSeq & \includegraphics[width=35px]{icons/moseq_no_paws_no_tail_Skeleton_colorized.pdf} & \includegraphics[width=35px]{icons/moseq_no_paws_no_tail_Skeleton_colorized_red.pdf} & \cite{weinreb2024keypoint} & 6 & 594 \\
+        \textcolor[HTML]{BEBADA}{\rule{0.25cm}{0.25cm}} & Mouse Resource & \includegraphics[width=35px]{icons/sun_wang_paper_mars_no_tail_Skeleton_colorized.pdf} & \includegraphics[width=35px]{icons/sun_wang_paper_mars_no_tail_Skeleton_colorized_red.pdf} & \cite{sun2022large} & 5 & 462 \\
+        \midrule
+        \rowcolor{rowlight}
+        \textcolor[HTML]{FDB462}{\rule{0.25cm}{0.25cm}} & No Tail & \includegraphics[width=35px]{icons/no_tail_Skeleton_colorized.pdf} & \includegraphics[width=35px]{icons/no_tail_Skeleton_colorized_red.pdf} & N/A & 10 & 1,446 \\
+        \textcolor[HTML]{B3DE69}{\rule{0.25cm}{0.25cm}} & No Ears & \includegraphics[width=35px]{icons/no_ears_Skeleton_colorized.pdf} & \includegraphics[width=35px]{icons/no_ears_Skeleton_colorized_red.pdf} & N/A & 10 & 1,350 \\
+        \rowcolor{rowlight}
+        \textcolor[HTML]{FCCDE5}{\rule{0.25cm}{0.25cm}} & No Nose or Tail & \includegraphics[width=35px]{icons/no_nose_no_tail_Skeleton_colorized.pdf} & \includegraphics[width=35px]{icons/no_nose_no_tail_Skeleton_colorized_red.pdf} & N/A & 9 & 987 \\
+        \textcolor[HTML]{D9D9D9}{\rule{0.25cm}{0.25cm}} & No Paws & \includegraphics[width=35px]{icons/no_paws_Skeleton_colorized.pdf} & \includegraphics[width=35px]{icons/no_paws_Skeleton_colorized_red.pdf} & N/A & 8 & 921 \\
+        \rowcolor{rowlight}
+        \textcolor[HTML]{BC80BD}{\rule{0.25cm}{0.25cm}} & Nose and Paws & \includegraphics[width=35px]{icons/paws_and_nose_Skeleton_colorized.pdf} & \includegraphics[width=35px]{icons/paws_and_nose_Skeleton_colorized_red.pdf} & N/A & 6 & 501 \\
+        \textcolor[HTML]{CCEBC5}{\rule{0.25cm}{0.25cm}} & Nose and Base Tail & \includegraphics[width=35px]{icons/nose_butt_Skeleton_colorized.pdf} & \includegraphics[width=35px]{icons/nose_butt_Skeleton_colorized_red.pdf} & N/A & 2 & 153 \\
+        \midrule
+        \rowcolor{rowlight}
+        \textcolor[HTML]{FB8072}{\rule{0.25cm}{0.25cm}} & Segmentation & \includegraphics[width=35px]{icons/Segmentation_colorized.pdf} & \includegraphics[width=35px]{icons/Segmentation_colorized_red.pdf} & \cite{geuther2022high} & N/A & 672 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Keypoint sets tested for downstream behavior classifier performance. Published keypoint sets are in the first section of the table, other ablations are below, segmentation feature number is reported at the bottom. Each set of keypoints has features calculated which are not scaled linearly to keypoint number, as some keypoints are used in more feature calculations than others.}
+    \label{table:keypoint_sets}
+\end{table}
+
+\end{document}
+

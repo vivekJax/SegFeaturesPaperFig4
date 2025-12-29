@@ -1,0 +1,35 @@
+\begin{table*}
+\sffamily
+\begin{center}
+\small
+\begin{tabular}{ | m{.7cm} |m{1cm} m{.5cm} | m{2.5cm} |  c |}
+    \hline
+    \textbf{Color} & \multicolumn{2}{|c|}{\textbf{Icon}} & 
+    \textbf{Feature Set} &  \textbf{F1} \\
+    \hline
+    \cellcolor[HTML]{000000} & - & \cite{geuther2021action} & CNN &  0.904  \\
+    \cellcolor[HTML]{5A2D5C} & \includegraphics[width=35px]{icons/JABS_Skeleton_colorized_red.pdf} & \cite{beane2022video} & FFT \cite{geuther2022high} &  \textbf{0.917} \\ 
+    \cellcolor[HTML]{984EA3} &\includegraphics[width=35px]{icons/JABS_Skeleton_colorized_red.pdf} & \cite{beane2022video} & JAABA \cite{kabra2013jaaba} &  0.911 \\
+    \cellcolor[HTML]{C299D1} &\includegraphics[width=35px]{icons/JABS_Skeleton_colorized_red.pdf} & \cite{beane2022video} & JABS \cite{beane2022video} &  0.907 \\
+    \cellcolor[HTML]{2D682D} &\includegraphics[width=35px]{icons/Segmentation_colorized_red.pdf} & \cite{geuther2022high} & FFT \cite{geuther2022high} &  0.885 \\
+    \cellcolor[HTML]{4DAF4A} &\includegraphics[width=35px]{icons/Segmentation_colorized_red.pdf} & \cite{geuther2022high} & JAABA \cite{kabra2013jaaba} &  0.862  \\
+    \cellcolor[HTML]{A8D9A8} &\includegraphics[width=35px]{icons/Segmentation_colorized_red.pdf} & \cite{geuther2022high} & JABS \cite{beane2022video} &  0.850 \\
+    \hline
+    \cellcolor[HTML]{984EA3} & \includegraphics[width=35px]{icons/JABS_Skeleton_colorized_red.pdf} & \cite{beane2022video} & JABS  &  \textbf{0.917} \\
+    \cellcolor[HTML]{FF7F00} &\includegraphics[width=35px]{icons/mars_no_front_paws_no_center_spine_Skeleton_colorized_red.pdf} & \cite{segalin2021mouse} & MARS & 0.900 \\
+    \cellcolor[HTML]{2B8CBE} &\includegraphics[width=35px]{icons/moseq_no_paws_no_tail_Skeleton_colorized_red.pdf} & \cite{weinreb2024keypoint} & MoSeq &  0.894 \\
+    \cellcolor[HTML]{F781BF} &\includegraphics[width=35px]{icons/sun_wang_paper_mars_no_tail_Skeleton_colorized_red.pdf} & \cite{sun2022large} & Mouse Resource &  0.894 \\
+    \hline
+    \cellcolor[HTML]{2B8CBE} &\includegraphics[width=35px]{icons/no_ears_Skeleton_colorized_red.pdf} & & No Ears &  0.904 \\
+    \cellcolor[HTML]{E41A1C} & \includegraphics[width=35px]{icons/no_tail_Skeleton_colorized_red.pdf} & & No Tail & \textbf{0.906} \\
+    \cellcolor[HTML]{F781BF} &\includegraphics[width=35px]{icons/no_paws_Skeleton_colorized_red.pdf} & & No Paws &  0.881 \\
+    \cellcolor[HTML]{FF7F00} &\includegraphics[width=35px]{icons/no_nose_no_tail_Skeleton_colorized_red.pdf} & & No Nose or Tail &  0.892 \\
+    \cellcolor[HTML]{FFFF33} &\includegraphics[width=35px]{icons/paws_and_nose_Skeleton_colorized_red.pdf} & & Paws and Nose &  0.883 \\
+    \cellcolor[HTML]{888888} &\includegraphics[width=35px]{icons/nose_butt_Skeleton_colorized_red.pdf} & & Nose and Base Tail &  0.870 \\
+    \hline
+
+\end{tabular}
+\caption{Performance of grooming classi fication task for segmentation and keypoint representations with different window features trained on the full grooming dataset. Performance of grooming classification task for different keypoint subsets trained with FFT window features on the full grooming dataset. Bold indicates best performance for each category. \textcolor{red}{XXX obviously need to edit figure and table legends}}
+\label{table:1}
+\end{center}
+\end{table*}

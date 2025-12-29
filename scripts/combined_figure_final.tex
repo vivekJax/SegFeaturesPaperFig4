@@ -1,0 +1,155 @@
+% ============================================================================
+% LaTeX Document: Combined Figure with Plot (Panel A) and Table (Panel B)
+% ============================================================================
+% 
+% PIPELINE STEP: 3 of 3
+% INPUT:  fig_combined_from_plotnine.pdf (from Step 2)
+%         icons/ (directory with PDF icons)
+% OUTPUT: combined_figure_final.pdf (FINAL FIGURE)
+%
+% This document is AUTO-GENERATED from config.yaml
+% To modify, edit config.yaml and regenerate this file
+%
+% Usage:
+%     python generate_latex_from_config.py
+%     pdflatex -output-directory=.. combined_figure_final.tex
+%
+% ============================================================================
+
+\documentclass{article}
+
+% ============================================================================
+% PACKAGES
+% ============================================================================
+\usepackage[utf8]{inputenc}      % Enable UTF-8 character encoding
+\usepackage{graphicx}            % For including images (includegraphics)
+\usepackage{xcolor}              % For color definitions and text coloring
+\usepackage{colortbl}            % For colored table rows and cells
+\usepackage{array}                % Extended column types for tables
+\usepackage{float}                % Better float positioning (H option)
+\usepackage{cite}                 % Citation management
+\usepackage{booktabs}             % Professional table rules (toprule, midrule, etc.)
+\usepackage{tabularx}             % Extended table functionality
+\usepackage{multirow}             % Multi-row cells in tables
+\usepackage{geometry}             % Page layout control
+\usepackage{subcaption}           % Subfigures and subcaptions
+\usepackage{adjustbox}            % Box adjustment (scaling, alignment)
+
+% ============================================================================
+% PAGE GEOMETRY
+% ============================================================================
+\geometry{
+    paperwidth=8.5in,             % Page width
+    paperheight=6.0in,              % Page height
+    margin=0.0in,                  % Margins
+    headheight=0pt,                            % No header space
+    footskip=0pt                                % No footer space
+}
+\pagestyle{empty}                           % Remove page numbers and headers
+
+% ============================================================================
+% COLOR DEFINITIONS
+% ============================================================================
+
+% Table styling colors
+\definecolor{headerbg}{HTML}{F5F5F5}    % Header background
+\definecolor{rowlight}{HTML}{FAFAFA}   % Alternating row color
+
+% ============================================================================
+% DOCUMENT BODY
+% ============================================================================
+\begin{document}
+\thispagestyle{empty}                       % No page number on this page
+\setlength{\topskip}{0pt}                % Remove top skip
+\setlength{\parskip}{0pt}                % Remove paragraph spacing
+\vspace*{0pt}                                % No negative spacing to keep labels visible
+\hspace*{-1cm}                               % Move both panels 1cm to the left to center them
+\noindent
+    % Panel A: Combined plot from R
+    \begin{minipage}[t]{0.65\textwidth}
+        \vspace{0pt}
+        \sffamily\hspace{1.5cm}\textbf{\Large A}\\[0.005cm]
+        \adjustbox{width=\textwidth,height=5.5in,keepaspectratio,center}{
+            \includegraphics[width=\textwidth, keepaspectratio]{../fig_combined_from_plotnine.pdf}%
+        }
+    \end{minipage}%
+    \hfill
+    % Panel B: Summary table with color column
+    \begin{minipage}[t]{0.33\textwidth}
+        \vspace{0pt}
+        \sffamily\hspace*{-1cm}\hspace{0cm}\textbf{\Large B}\\[0.02cm]
+        
+        \hspace*{-1cm}                       % Move table 1cm to the left (label stays in place)
+        \adjustbox{height=2.5in,valign=f,center}{
+            \sffamily
+            \normalsize
+            \renewcommand{\arraystretch}{1.0}
+            \setlength{\tabcolsep}{4pt}
+            
+            % ================================================================
+            % TABLE DEFINITION
+            % ================================================================
+            \begin{tabular}{>{\centering\arraybackslash}p{0.25cm} c l c}
+                \toprule
+                \rowcolor{headerbg}
+                \textbf{} & \textbf{Icon} & \textbf{Feature Set} & \textbf{F1} \\
+                \midrule
+                
+                % ============================================================
+                % WINDOWS SECTION
+                % ============================================================
+                \multicolumn{4}{l}{\textit{Windows}} \\
+                \midrule
+                \rowcolor{rowlight}
+                \textcolor[HTML]{ff7f0e}{\rule{0.25cm}{0.25cm}} & \includegraphics[width=18px]{../icons/JABS_Skeleton_colorized_red.pdf} & All Keypoints + FFT & \textbf{0.917} \\
+                
+                \textcolor[HTML]{2ca02c}{\rule{0.25cm}{0.25cm}} & \includegraphics[width=18px]{../icons/JABS_Skeleton_colorized_red.pdf} & All Keypoints + JAABA & 0.911 \\
+                \rowcolor{rowlight}
+                \textcolor[HTML]{1f77b4}{\rule{0.25cm}{0.25cm}} & \includegraphics[width=18px]{../icons/JABS_Skeleton_colorized_red.pdf} & All Keypoints + JABS & 0.907 \\
+                
+                \textcolor[HTML]{9467bd}{\rule{0.25cm}{0.25cm}} & \includegraphics[width=18px]{../icons/Segmentation_colorized_red.pdf} & Segmentation + FFT & 0.885 \\
+                \rowcolor{rowlight}
+                \textcolor[HTML]{8c564b}{\rule{0.25cm}{0.25cm}} & \includegraphics[width=18px]{../icons/Segmentation_colorized_red.pdf} & Segmentation + JAABA & 0.862 \\
+                
+                \textcolor[HTML]{d62728}{\rule{0.25cm}{0.25cm}} & \includegraphics[width=18px]{../icons/Segmentation_colorized_red.pdf} & Segmentation + JABS & 0.85 \\
+                \midrule
+
+                % ============================================================
+                % NAMED KEYPOINTS SECTION
+                % ============================================================
+                \multicolumn{4}{l}{\textit{Named Keypoints}} \\
+                \midrule
+                \rowcolor{rowlight}
+                \textcolor[HTML]{e377c2}{\rule{0.25cm}{0.25cm}} & \includegraphics[width=18px]{../icons/JABS_Skeleton_colorized_red.pdf} & All Keypoints (JABS) & \textbf{0.917} \\
+                
+                \textcolor[HTML]{7f7f7f}{\rule{0.25cm}{0.25cm}} & \includegraphics[width=18px]{../icons/mars_no_front_paws_no_center_spine_Skeleton_colorized_red.pdf} & MARS & 0.9 \\
+                \rowcolor{rowlight}
+                \textcolor[HTML]{bcbd22}{\rule{0.25cm}{0.25cm}} & \includegraphics[width=18px]{../icons/moseq_no_paws_no_tail_Skeleton_colorized_red.pdf} & MoSeq & 0.894 \\
+                
+                \textcolor[HTML]{17becf}{\rule{0.25cm}{0.25cm}} & \includegraphics[width=18px]{../icons/sun_wang_paper_mars_no_tail_Skeleton_colorized_red.pdf} & Mouse Resource & 0.894 \\
+                \midrule
+
+                % ============================================================
+                % OTHER KEYPOINTS SECTION
+                % ============================================================
+                \multicolumn{4}{l}{\textit{Other Keypoints}} \\
+                \midrule
+                \rowcolor{rowlight}
+                \textcolor[HTML]{aec7e8}{\rule{0.25cm}{0.25cm}} & \includegraphics[width=18px]{../icons/no_ears_Skeleton_colorized_red.pdf} & No Ears & 0.904 \\
+                
+                \textcolor[HTML]{ff9896}{\rule{0.25cm}{0.25cm}} & \includegraphics[width=18px]{../icons/no_tail_Skeleton_colorized_red.pdf} & No Tail & \textbf{0.906} \\
+                \rowcolor{rowlight}
+                \textcolor[HTML]{98df8a}{\rule{0.25cm}{0.25cm}} & \includegraphics[width=18px]{../icons/no_paws_Skeleton_colorized_red.pdf} & No Paws & 0.881 \\
+                
+                \textcolor[HTML]{ffbb78}{\rule{0.25cm}{0.25cm}} & \includegraphics[width=18px]{../icons/no_nose_no_tail_Skeleton_colorized_red.pdf} & No Nose or Tail & 0.892 \\
+                \rowcolor{rowlight}
+                \textcolor[HTML]{c49c94}{\rule{0.25cm}{0.25cm}} & \includegraphics[width=18px]{../icons/paws_and_nose_Skeleton_colorized_red.pdf} & Nose and Paws & 0.883 \\
+                
+                \textcolor[HTML]{c5b0d5}{\rule{0.25cm}{0.25cm}} & \includegraphics[width=18px]{../icons/nose_butt_Skeleton_colorized_red.pdf} & Nose and Base Tail & 0.87 \\
+                
+                \bottomrule
+            \end{tabular}%
+        }
+    \end{minipage}
+
+\end{document}

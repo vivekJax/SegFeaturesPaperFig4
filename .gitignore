@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# R
+.Rhistory
+.RData
+.Ruserdata
+
+# Output files
+*.png
+*.svg
+*.pdf
+*.csv
+!combined_df.csv
+
+# LaTeX
+*.aux
+*.log
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# OS
+.DS_Store
+Thumbs.db
