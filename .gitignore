@@ -18,6 +18,7 @@ ENV/
 !combined_figure_final.png  # Allow final figure PNG for GitHub display
 *.svg
 *.pdf
+!combined_figure_final.pdf  # Allow final figure PDF for GitHub
 *.csv
 !combined_df.csv
 
