@@ -1,4 +1,4 @@
-# Figure Generation Pipeline
+# Figure Generation Figure 4 Pipeline
 
 This project generates a combined figure showing classifier performance across different feature sets and training dataset sizes. The figure consists of two panels: a performance metrics plot (Panel A) and a summary table with F1 scores (Panel B).
 
